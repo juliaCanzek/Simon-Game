@@ -1,7 +1,12 @@
 /*! Built with http://stenciljs.com */
 const { h } = window.App;
 
+import { Highscore } from './chunk1.js';
+
 class SnGameover {
+    componentDidLoad() {
+        Highscore.addHighscore(this.match.params.count);
+    }
     render() {
         return (h("div", null,
             h("header", null,
@@ -14,6 +19,9 @@ class SnGameover {
                 h("div", { class: "menu-item" },
                     h("stencil-route-link", { url: '/game' },
                         h("button", null, "Try again"))),
+                h("div", { class: "menu-item" },
+                    h("stencil-route-link", { url: '/highscore' },
+                        h("button", null, "Highscore"))),
                 h("div", { class: "menu-item" },
                     h("stencil-route-link", { url: "/" },
                         h("button", null, "Back to menu"))))));

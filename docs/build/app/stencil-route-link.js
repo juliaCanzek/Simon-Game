@@ -1,7 +1,7 @@
 /*! Built with http://stenciljs.com */
 const { h } = window.App;
 
-import { matchPath } from './chunk1.js';
+import { matchPath } from './chunk2.js';
 
 /**
   * @name Route

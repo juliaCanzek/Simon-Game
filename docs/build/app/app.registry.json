@@ -18,6 +18,9 @@
     "sn-gameover": {
       "$": "sn-gameover"
     },
+    "sn-highscore": {
+      "$": "sn-highscore"
+    },
     "sn-menu": {
       "$": "sn-menu"
     },

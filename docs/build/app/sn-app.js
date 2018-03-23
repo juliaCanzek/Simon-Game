@@ -1,14 +1,15 @@
 /*! Built with http://stenciljs.com */
 const { h } = window.App;
 
-import { matchPath } from './chunk1.js';
+import { matchPath } from './chunk2.js';
 
 class SnApp {
     render() {
         return (h("stencil-router", null,
             h("stencil-route", { url: '/', component: 'sn-menu', exact: true }),
             h("stencil-route", { url: '/game', component: 'sn-game' }),
-            h("stencil-route", { url: '/gameover/:count', component: 'sn-gameover' })));
+            h("stencil-route", { url: '/gameover/:count', component: 'sn-gameover' }),
+            h("stencil-route", { url: '/highscore', component: 'sn-highscore' })));
     }
     static get is() { return "sn-app"; }
     static get style() { return "header {\n    background: grey;\n    color: white;\n    height: 56px;\n    display: flex;\n    align-items: center;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n}\n  \nh1 {\n    font-size: 1.4rem;\n    font-weight: 500;\n    color: #fff;\n    padding: 0 12px;\n}\nh2 {\n    text-align: center;\n}\n\nmain {\n    display:flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: column; \n    min-height:60vh;\n}\n\n.menu-item {\n    margin:10px;\n    text-align: center;\n}\n\nbutton {\n    border-radius: 5px;\n    background:#888;\n    color:white;\n    border:none;\n    padding:10px;\n    font-size: 20px;\n}\n  "; }
